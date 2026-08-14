@@ -1,33 +1,35 @@
-import { motion } from 'framer-motion'
-import ProjectCard from './ProjectCard'
-import { projects } from '../data/projects'
+import { experience } from '../data/experience'
 
 export default function Work() {
   return (
-    <section id="work" className="section py-32 border-t border-surface-2">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-end justify-between mb-16"
-      >
-        <div>
-          <p className="text-text-muted text-sm uppercase tracking-widest mb-4 font-body">
-            Selected work
-          </p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-text-primary leading-none">
-            Projects
-          </h2>
-        </div>
-        <p className="text-text-muted font-body text-sm hidden md:block">
-          {projects.length} projects
-        </p>
-      </motion.div>
-
-      <div className="grid md:grid-cols-2 gap-x-8 gap-y-16">
-        {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} index={index} />
+    <section className="section pb-24">
+      <div className="space-y-10">
+        {experience.map((job) => (
+          <div key={job.company} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8">
+            <div className="flex flex-col gap-0.5">
+              <div className="flex items-center gap-2">
+                <span className="text-text-primary text-sm font-body font-medium">
+                  {job.company}
+                </span>
+                {job.current && (
+                  <span className="text-accent text-[10px] font-body uppercase tracking-wide">
+                    now
+                  </span>
+                )}
+              </div>
+              <span className="text-text-muted text-sm font-body">{job.role}</span>
+              <span className="text-text-muted text-xs font-body">
+                {job.period} · {job.location}
+              </span>
+            </div>
+            <ul className="space-y-1.5">
+              {job.bullets.map((bullet) => (
+                <li key={bullet} className="text-text-muted text-sm font-body leading-relaxed">
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </section>
