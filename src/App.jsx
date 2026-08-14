@@ -25,10 +25,12 @@ export default function App() {
   }, [])
 
   function handleTabChange(tab) {
+    if (tab === activeTab) return
     setActiveTab(tab)
     const url = new URL(window.location.href)
     url.searchParams.set('section', tab)
     window.history.pushState({}, '', url)
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   const ActiveSection = SECTION_COMPONENTS[activeTab]
@@ -36,7 +38,7 @@ export default function App() {
   return (
     <>
       <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
-      <main>
+      <main className="flex-1">
         <motion.div
           key={activeTab}
           initial={{ opacity: 0 }}

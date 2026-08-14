@@ -15,6 +15,7 @@ export default function Navbar({ activeTab, onTabChange }) {
             key={tab}
             type="button"
             onClick={() => onTabChange(tab)}
+            aria-current={activeTab === tab ? 'page' : undefined}
             className={`text-sm font-body transition-colors duration-150 ${
               activeTab === tab
                 ? 'text-accent'

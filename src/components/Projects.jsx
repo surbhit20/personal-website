@@ -7,23 +7,29 @@ export default function Projects() {
         {projects.map((project) => (
           <div key={project.id} className="flex flex-col gap-1">
             <div className="flex items-baseline gap-3 flex-wrap">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-primary text-sm font-body underline hover:text-accent transition-colors"
-              >
-                {project.title}
-              </a>
+              {project.link && project.link !== '#' ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-primary text-sm font-body underline hover:text-accent transition-colors"
+                >
+                  {project.title}
+                </a>
+              ) : (
+                <span className="text-text-primary text-sm font-body">{project.title}</span>
+              )}
               <span className="text-text-muted text-xs font-body">{project.type}</span>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted text-xs font-body underline hover:text-accent transition-colors"
-              >
-                GitHub
-              </a>
+              {project.github && project.github !== '#' && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted text-xs font-body underline hover:text-accent transition-colors"
+                >
+                  GitHub
+                </a>
+              )}
             </div>
             <p className="text-text-muted text-sm font-body leading-relaxed max-w-2xl">
               {project.description}
