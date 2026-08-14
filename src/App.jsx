@@ -38,7 +38,7 @@ export default function App() {
   return (
     <>
       <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
-      <main className="flex-1">
+      <main className="flex-1 pb-16">
         <motion.div
           key={activeTab}
           initial={{ opacity: 0 }}
