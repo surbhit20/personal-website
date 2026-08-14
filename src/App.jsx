@@ -1,73 +1,50 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
 import Work from './components/Work'
+import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { getSectionFromURL } from './utils/sections'
 
-function CustomCursor() {
-  const dot = useRef(null)
-  const ring = useRef(null)
-
-  useEffect(() => {
-    let rafId
-
-    const move = (e) => {
-      rafId = requestAnimationFrame(() => {
-        if (dot.current) {
-          dot.current.style.left = `${e.clientX}px`
-          dot.current.style.top = `${e.clientY}px`
-        }
-        if (ring.current) {
-          ring.current.style.left = `${e.clientX}px`
-          ring.current.style.top = `${e.clientY}px`
-        }
-      })
-    }
-
-    const onEnter = (e) => {
-      if (e.target.closest('[data-cursor-hover]') && ring.current) {
-        ring.current.classList.add('hovering')
-      }
-    }
-
-    const onLeave = (e) => {
-      if (e.target.closest('[data-cursor-hover]') && ring.current) {
-        ring.current.classList.remove('hovering')
-      }
-    }
-
-    window.addEventListener('mousemove', move)
-    document.addEventListener('mouseover', onEnter)
-    document.addEventListener('mouseout', onLeave)
-
-    return () => {
-      window.removeEventListener('mousemove', move)
-      document.removeEventListener('mouseover', onEnter)
-      document.removeEventListener('mouseout', onLeave)
-      cancelAnimationFrame(rafId)
-    }
-  }, [])
-
-  return (
-    <>
-      <div ref={dot} className="cursor-dot" />
-      <div ref={ring} className="cursor-ring" />
-    </>
-  )
+const SECTION_COMPONENTS = {
+  work: Work,
+  projects: Projects,
+  about: About,
+  contact: Contact,
 }
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState(getSectionFromURL)
+
+  useEffect(() => {
+    const onPopState = () => setActiveTab(getSectionFromURL())
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  function handleTabChange(tab) {
+    setActiveTab(tab)
+    const url = new URL(window.location.href)
+    url.searchParams.set('section', tab)
+    window.history.pushState({}, '', url)
+  }
+
+  const ActiveSection = SECTION_COMPONENTS[activeTab]
+
   return (
     <>
-      <CustomCursor />
-      <Navbar />
+      <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
       <main>
-        <Hero />
-        <Work />
-        <About />
-        <Contact />
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.15 }}
+        >
+          <ActiveSection />
+        </motion.div>
       </main>
       <Footer />
     </>
