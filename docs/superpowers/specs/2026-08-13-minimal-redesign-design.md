@@ -108,22 +108,23 @@ site doesn't have one.
 
 ## Deployment: surbhitpratik.com
 
-Current state: no git repo exists locally, no GitHub repo exists yet. `gh`
-CLI is already authenticated as `surbhit20` with `repo` scope. Domain is
-registered at Namecheap.
+Current state: local git repo now initialized in `/Users/surbhit/portfolio`
+(first commit is this spec doc). Target GitHub repo already exists and is
+empty: `surbhit20/personal-website`. `gh` CLI is already authenticated as
+`surbhit20` with `repo` scope. Domain is registered at Namecheap.
 
 Plan:
-1. `git init` in `/Users/surbhit/portfolio`, initial commit.
-2. `gh repo create` (public repo, e.g. `surbhit20/portfolio`), push.
-3. Add `public/CNAME` containing `surbhitpratik.com`.
-4. In Namecheap DNS for `surbhitpratik.com`: four `A` records at the apex
+1. Add `origin` remote pointing at
+   `https://github.com/surbhit20/personal-website.git`, push `main`.
+2. Add `public/CNAME` containing `surbhitpratik.com`.
+3. In Namecheap DNS for `surbhitpratik.com`: four `A` records at the apex
    pointing to GitHub Pages' IPs (`185.199.108.153`, `.109`, `.110`, `.111`),
    plus a `CNAME` record for `www` → `surbhit20.github.io`.
-5. `npm run deploy` (via `gh-pages` package) to publish `dist/` to the
+4. `npm run deploy` (via `gh-pages` package) to publish `dist/` to the
    `gh-pages` branch.
-6. In the GitHub repo's Settings → Pages: set custom domain to
+5. In the GitHub repo's Settings → Pages: set custom domain to
    `surbhitpratik.com`, enable "Enforce HTTPS" once DNS has propagated.
-7. `vite.config.js` `base: '/'` already correct for a custom domain served
+6. `vite.config.js` `base: '/'` already correct for a custom domain served
    from root — no change needed.
 
 This is a first-time setup for the user, so each step will be walked
