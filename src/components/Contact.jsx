@@ -29,7 +29,7 @@ export default function Contact() {
         </a>
         .
       </p>
-      <p className="text-text-muted text-sm font-body">Based in Los Angeles, CA.</p>
+      <p className="text-text-muted text-sm font-body">Based in San Francisco, CA.</p>
     </section>
   )
 }

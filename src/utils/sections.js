@@ -1,4 +1,4 @@
-export const SECTIONS = ['work', 'projects', 'about', 'contact']
+export const SECTIONS = ['work', 'projects', 'writing', 'about', 'contact']
 
 export function getSectionFromURL() {
   const params = new URLSearchParams(window.location.search)
