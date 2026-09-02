@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
-import Work from './components/Work'
 import Projects from './components/Projects'
 import Writing from './components/Writing'
 import About from './components/About'
@@ -10,7 +9,6 @@ import Footer from './components/Footer'
 import { getSectionFromURL } from './utils/sections'
 
 const SECTION_COMPONENTS = {
-  work: Work,
   projects: Projects,
   writing: Writing,
   about: About,

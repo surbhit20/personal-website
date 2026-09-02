@@ -6,9 +6,18 @@ export default function Navbar({ activeTab, onTabChange }) {
       <h1 className="font-heading font-bold text-text-primary text-lg mb-1">
         Surbhit Pratik
       </h1>
-      <p className="text-text-muted text-sm mb-6 font-body">
+      <p className="text-text-muted text-sm mb-4 font-body">
         Software Engineer @ Easley Dunn Productions, Inc.
       </p>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 border border-accent text-accent text-xs uppercase tracking-wide font-body px-3 py-1.5 rounded-full mb-6 hover:bg-accent hover:text-bg transition-colors duration-150"
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        actively looking for work
+      </a>
       <nav className="flex items-center gap-6">
         {SECTIONS.map((tab) => (
           <button
