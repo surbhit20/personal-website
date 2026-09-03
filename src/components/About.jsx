@@ -14,7 +14,7 @@ export default function About() {
             <img
               src={entry.logo}
               alt={entry.school}
-              className="w-9 h-9 rounded-md object-cover border border-surface-2 mt-0.5 shrink-0"
+              className="w-10 h-10 object-contain object-left mt-0.5 shrink-0"
             />
             <div className="flex flex-col gap-0.5">
               <span className="text-text-primary text-sm font-body font-medium">{entry.school}</span>
