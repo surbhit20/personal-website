@@ -27,9 +27,7 @@ export default function App() {
   function handleTabChange(tab) {
     if (tab === activeTab) return
     setActiveTab(tab)
-    const url = new URL(window.location.href)
-    url.searchParams.set('section', tab)
-    window.history.pushState({}, '', url)
+    window.history.pushState({}, '', `/${tab}`)
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
