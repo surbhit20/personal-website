@@ -3,7 +3,7 @@ export const education = [
     school: 'University of Southern California',
     degree: 'Master of Science (MS), Computer Science',
     period: 'Jan 2024 — Dec 2025',
-    logo: '/images/education/usc-mono.png',
+    logo: '/images/education/usc-lockup-mono.png',
   },
   {
     school: 'SRM Institute of Science and Technology',
