@@ -14,7 +14,8 @@ export default function About() {
             <img
               src={entry.logo}
               alt={entry.school}
-              className="h-16 w-auto object-contain object-left shrink-0"
+              className="object-contain object-left shrink-0"
+              style={{ height: 64, width: 64 * entry.logoAspect }}
             />
             <div className="flex flex-col gap-0.5">
               <span className="text-text-primary text-sm font-body font-medium">{entry.school}</span>
