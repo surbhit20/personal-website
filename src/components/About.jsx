@@ -10,10 +10,17 @@ export default function About() {
 
       <div className="space-y-4 mb-10">
         {education.map((entry) => (
-          <div key={entry.school} className="flex flex-col gap-0.5">
-            <span className="text-text-primary text-sm font-body font-medium">{entry.school}</span>
-            <span className="text-text-muted text-sm font-body">{entry.degree}</span>
-            <span className="text-text-muted text-xs font-body">{entry.period}</span>
+          <div key={entry.school} className="flex items-start gap-3">
+            <img
+              src={entry.logo}
+              alt={entry.school}
+              className="w-9 h-9 rounded-md object-cover border border-surface-2 mt-0.5 shrink-0"
+            />
+            <div className="flex flex-col gap-0.5">
+              <span className="text-text-primary text-sm font-body font-medium">{entry.school}</span>
+              <span className="text-text-muted text-sm font-body">{entry.degree}</span>
+              <span className="text-text-muted text-xs font-body">{entry.period}</span>
+            </div>
           </div>
         ))}
       </div>
