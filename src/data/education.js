@@ -10,7 +10,7 @@ export const education = [
     school: 'SRM Institute of Science and Technology',
     degree: 'Bachelor of Technology (B.Tech), Computer Science; Minor: Software Engineering',
     period: 'Jul 2019 — Jun 2023',
-    logo: '/images/education/srm-crest-mono.png',
-    logoAspect: 550 / 168,
+    logo: '/images/education/srm-mono.png',
+    logoAspect: 320 / 128,
   },
 ]
