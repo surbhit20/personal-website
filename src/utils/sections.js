@@ -1,4 +1,4 @@
-export const SECTIONS = ['projects', 'writing', 'about', 'contact']
+export const SECTIONS = ['projects', 'writing', 'about']
 
 export function getSectionFromURL() {
   const path = window.location.pathname.replace(/^\/+|\/+$/g, '')

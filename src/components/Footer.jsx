@@ -18,10 +18,36 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 py-3 flex justify-center bg-bg">
-      <span className="text-text-muted text-xs font-body">
-        {time} · san francisco
-      </span>
+    <footer className="fixed bottom-0 left-0 right-0 py-3 bg-bg">
+      <div className="section flex flex-col sm:flex-row items-center justify-between gap-1 text-xs font-body text-text-muted">
+        <div className="flex items-center gap-3">
+          <a
+            href="mailto:surbhitpratik15@gmail.com"
+            className="hover:text-accent transition-colors"
+          >
+            surbhitpratik15@gmail.com
+          </a>
+          <span>·</span>
+          <a
+            href="https://linkedin.com/in/surbhit-pratik"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            linkedin
+          </a>
+          <span>·</span>
+          <a
+            href="https://github.com/surbhit20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            github
+          </a>
+        </div>
+        <span>{time} · san francisco</span>
+      </div>
     </footer>
   )
 }

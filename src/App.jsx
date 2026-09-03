@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Writing from './components/Writing'
 import About from './components/About'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { getSectionFromURL } from './utils/sections'
 
@@ -12,7 +11,6 @@ const SECTION_COMPONENTS = {
   projects: Projects,
   writing: Writing,
   about: About,
-  contact: Contact,
 }
 
 export default function App() {
@@ -36,7 +34,7 @@ export default function App() {
   return (
     <>
       <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
-      <main className="flex-1 pb-16">
+      <main className="flex-1 pb-24">
         <motion.div
           key={activeTab}
           initial={{ opacity: 0 }}
