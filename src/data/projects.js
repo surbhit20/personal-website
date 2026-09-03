@@ -6,7 +6,7 @@ export const projects = [
     thumbnail: null,
     demo: 'https://youtu.be/PSs0ckJ0jt4?si=_Ir77z9juDHKbV7Z',
     demoLabel: 'youtube',
-    github: null,
+    github: 'https://github.com/surbhit20/mia',
   },
   {
     id: 'codesense',
