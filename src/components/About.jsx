@@ -10,12 +10,12 @@ export default function About() {
 
       <div className="space-y-4 mb-10">
         {education.map((entry) => (
-          <div key={entry.school} className="flex items-start gap-3">
+          <div key={entry.school} className="grid grid-cols-[220px_1fr] items-start">
             <img
               src={entry.logo}
               alt={entry.school}
-              className="object-contain object-left shrink-0"
-              style={{ height: 64, width: 64 * entry.logoAspect }}
+              className="object-contain object-left"
+              style={{ height: 64, width: Math.min(220, 64 * entry.logoAspect) }}
             />
             <div className="flex flex-col gap-0.5">
               <span className="text-text-primary text-sm font-body font-medium">{entry.school}</span>
