@@ -7,7 +7,7 @@ export default {
         bg: '#fafafa',
         surface: '#f0f0f0',
         'surface-2': '#e2e2e2',
-        accent: '#2f7cb0',
+        accent: '#262626',
         'text-primary': '#262626',
         'text-muted': '#666666',
       },

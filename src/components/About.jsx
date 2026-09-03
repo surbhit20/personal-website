@@ -1,4 +1,4 @@
-import { tools } from '../data/tools'
+import { skillGroups } from '../data/tools'
 import { education } from '../data/education'
 
 export default function About() {
@@ -18,11 +18,23 @@ export default function About() {
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-x-3 gap-y-2">
-        {tools.map((tool) => (
-          <span key={tool} className="text-text-muted text-sm font-body">
-            {tool}
-          </span>
+      <div className="space-y-6">
+        {skillGroups.map((group) => (
+          <div key={group.category}>
+            <p className="text-text-muted text-xs uppercase tracking-wide font-body mb-2">
+              {group.category}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-text-muted text-xs font-body border border-surface-2 rounded-full px-3 py-1 hover:border-accent hover:text-accent transition-colors duration-150"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>

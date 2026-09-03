@@ -13,9 +13,8 @@ export default function Navbar({ activeTab, onTabChange }) {
         href="/resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 border border-accent text-accent text-xs uppercase tracking-wide font-body px-3 py-1.5 rounded-full mb-6 hover:bg-accent hover:text-bg transition-colors duration-150"
+        className="inline-block text-text-primary text-xs uppercase tracking-wide font-body underline mb-6"
       >
-        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
         actively looking for work
       </a>
       <nav className="flex items-center gap-6">
