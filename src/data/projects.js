@@ -12,7 +12,7 @@ export const projects = [
     id: 'codesense',
     title: 'CodeSense: Agentic Codebase Retrieval and Chat',
     tagline: 'Agentic coding assistant with AST-based retrieval across huge codebases.',
-    thumbnail: null,
+    thumbnail: '/images/projects/codesense.jpg',
     demo: 'https://youtu.be/YI1jCXRi_IU?si=Rufs3ER-GNZLFZpx',
     demoLabel: 'youtube',
     github: 'https://github.com/surbhit20/CodeSense',
