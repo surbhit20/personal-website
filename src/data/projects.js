@@ -3,7 +3,7 @@ export const projects = [
     id: 'mia',
     title: 'Mia: Real-Time Voice Agent for Google Meet',
     tagline: 'Voice agent that joins Google Meet and answers live.',
-    thumbnail: null,
+    thumbnail: '/images/projects/mia.jpg',
     demo: 'https://youtu.be/PSs0ckJ0jt4?si=_Ir77z9juDHKbV7Z',
     demoLabel: 'youtube',
     github: 'https://github.com/surbhit20/mia',
