@@ -21,7 +21,7 @@ export const projects = [
     id: 'ai-mafia',
     title: 'Made AI Play Mafia: Multi-Agent Asynchronous Communication',
     tagline: 'Multi-agent AI system playing social deduction game Mafia asynchronously.',
-    thumbnail: null,
+    thumbnail: '/images/projects/mafia.jpg',
     demo: null,
     demoLabel: null,
     github: 'https://github.com/surbhit20/multi-agent-orchestration',
