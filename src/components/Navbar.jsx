@@ -15,7 +15,7 @@ export default function Navbar({ activeTab, onTabChange }) {
         rel="noopener noreferrer"
         className="inline-block text-text-primary text-xs uppercase tracking-wide font-body underline mb-6"
       >
-        actively looking for work
+        actively looking for work ↗
       </a>
       <nav className="flex items-center gap-6">
         {SECTIONS.map((tab) => (
