@@ -21,7 +21,9 @@ export default function Projects() {
                       <img
                         src={project.thumbnail}
                         alt={project.tagline}
-                        className="absolute inset-0 h-full w-full object-cover"
+                        className={`absolute inset-0 h-full w-full object-cover ${
+                          project.thumbnailPosition === 'top' ? 'object-top' : ''
+                        }`}
                       />
                     )}
                   </div>

@@ -1,5 +1,15 @@
 export const projects = [
   {
+    id: 'flash',
+    title: 'Flash',
+    tagline: 'Chrome extension that searches video transcripts and jumps to answers.',
+    thumbnail: '/images/projects/flash.jpg',
+    thumbnailPosition: 'top',
+    demo: 'https://youtu.be/Hz9hPKukICI',
+    demoLabel: 'youtube',
+    github: 'https://github.com/surbhit20/jev-on-yt',
+  },
+  {
     id: 'mia',
     title: 'Mia: Real-Time Voice Agent for Google Meet',
     tagline: 'Voice agent that joins Google Meet and answers live.',
