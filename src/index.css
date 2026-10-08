@@ -39,6 +39,6 @@
 
 @layer components {
   .section {
-    @apply px-6 md:px-12 lg:px-24;
+    @apply px-6 md:px-12 lg:px-24 max-w-5xl mx-auto w-full;
   }
 }
