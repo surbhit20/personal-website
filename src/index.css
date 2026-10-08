@@ -39,6 +39,11 @@
 
 @layer components {
   .section {
-    @apply px-6 md:px-12 lg:px-24 max-w-5xl mx-auto w-full;
+    @apply px-6 md:px-12 lg:px-24 mx-auto w-full;
+    /* Scales with the viewport between a floor (matches the old fixed
+       1024px cap, so normal laptop widths are unchanged) and a ceiling
+       (prevents the ultrawide-monitor stretching this was added to fix
+       in the first place). */
+    max-width: clamp(1024px, 70vw, 1600px);
   }
 }
