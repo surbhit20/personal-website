@@ -22,6 +22,15 @@ export default function App() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
+  useEffect(() => {
+    if (typeof window.gtag !== 'function') return
+    window.gtag('event', 'page_view', {
+      page_path: window.location.pathname,
+      page_title: document.title,
+      page_location: window.location.href,
+    })
+  }, [activeTab])
+
   function handleTabChange(tab) {
     if (tab === activeTab) return
     setActiveTab(tab)
