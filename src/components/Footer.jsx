@@ -45,6 +45,15 @@ export default function Footer() {
           >
             github
           </a>
+          <span>·</span>
+          <a
+            href="https://x.com/surbhit_20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            x
+          </a>
         </div>
         <span>{time} · san francisco</span>
       </div>
