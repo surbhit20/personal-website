@@ -1,4 +1,15 @@
+import { TreeStructure, Brain } from '@phosphor-icons/react'
+
 export const projects = [
+  {
+    id: 'settle',
+    title: 'Settle',
+    tagline: 'Personalized ranking app that scores Bay Area ZIP codes on rent, crime, hazards, and commute for your exact job and priorities, with precomputed data and LLMs used only to classify and explain results.',
+    thumbnail: '/images/projects/settle.jpg',
+    demo: 'https://youtu.be/n0l2OrwoMIM?si=OfAODFAKMqlH73q3',
+    demoLabel: 'youtube',
+    github: 'https://github.com/surbhit20/settle',
+  },
   {
     id: 'flash',
     title: 'Flash',
@@ -12,7 +23,7 @@ export const projects = [
   {
     id: 'mia',
     title: 'Mia: Real-Time Voice Agent for Google Meet',
-    tagline: 'Voice agent that joins Google Meet and answers live.',
+    tagline: 'LLM-based voice agent that joins Google Meet, pairing streaming STT with Claude Opus over rolling call state for in-call queries, with sub-3s speech-to-speech p95 latency.',
     thumbnail: '/images/projects/mia.jpg',
     demo: 'https://youtu.be/PSs0ckJ0jt4?si=_Ir77z9juDHKbV7Z',
     demoLabel: 'youtube',
@@ -21,7 +32,7 @@ export const projects = [
   {
     id: 'codesense',
     title: 'CodeSense: Agentic Codebase Retrieval and Chat',
-    tagline: 'Agentic coding assistant with AST-based retrieval across huge codebases.',
+    tagline: 'LLM coding agent (Claude Sonnet 5) with a custom AST-based RAG system for precise context retrieval across codebases spanning 10,000+ interdependent files, saving model context by 74%.',
     thumbnail: '/images/projects/codesense-v2.jpg',
     demo: 'https://youtu.be/YI1jCXRi_IU?si=Rufs3ER-GNZLFZpx',
     demoLabel: 'youtube',
@@ -30,7 +41,7 @@ export const projects = [
   {
     id: 'ai-mafia',
     title: 'Made AI Play Mafia: Multi-Agent Asynchronous Communication',
-    tagline: 'Multi-agent AI system playing social deduction game Mafia asynchronously.',
+    tagline: 'Async multi-agent AI system enabling structured communication among 6+ autonomous agents in social deduction gameplay, with a modular 2-part brain architecture (Scheduler and Generator) and concurrency-safe shared context.',
     thumbnail: '/images/projects/mafia.jpg',
     demo: null,
     demoLabel: null,
